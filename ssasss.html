@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<canvas id="elsen" width="400" height="400" style="border:1px solid #000; border-radius: 200px">
+	BRAZERINIZ HTML5 DESTEKLERMIRSE SAAT ACILMAZ
+	</canvas>
+</head>
+<body>
+<script>
+	var c=document.getElementById("elsen");//elsen id sinin cagirriq
+	var g=c.getContext("2d");//2de bir sey olacagini burada qeyd edirik
+
+
+
+
+	// bundan sonra biz bir funksiya yazmaliyiq hansiki radianlar verileni dereceye cevirmek ucun (1 derece bir radiyan/180 dir )
+	function degToRad(val){
+		return val*(Math.PI / 180 );
+	}
+
+var x = c.width > c.height ? c.height : c.width; // Genişlik - Yükseklik Sabitleme UZUN YOLUDA var x;if( c.width > c.height){x = c.height;}else { x = c.width;}
+
+
+
+
+
+// Merkez HARA OLACAGINA QERAR VEREK(a, b)
+
+var a = x / 2;
+
+var b = x / 2;
+
+
+
+// MERKEZIN OLDUGUNU QEY EDEK 
+
+g.translate(a, b);
+
+
+
+// EQREBLERIN UCU YUMRUU OLSUN
+
+g.lineCap = "round"; 
+// SAAT IN MIIZIN DIZAYNINA KECEK
+
+
+</script>
+</body>
+</html>

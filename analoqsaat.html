@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+		<style type="text/css">
+	#main{
+	width: 600px;
+	height: 600px;
+	margin:0 auto;
+	border-radius: 100%;
+	margin-top: 50px;
+	background-image: url("saat.png");
+	position: relative;
+}
+.hour{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 8px 200px 8px;
+	border-color: transparent transparent #0d0c0c transparent;
+	position: absolute;
+	left:50%;
+	bottom:298px;
+	transform-origin:100% 100%;
+
+}
+.minute{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 6px 260px 6px;
+	border-color: transparent transparent #0d0c0c transparent;	
+	position: absolute;
+	left:50%;
+	bottom:298px;
+	transform-origin:100% 100%;
+	/*.minute{
+	height: 0;
+	width:0;
+	border-top:50px solid transparent;
+	border-left:5px solid transparent;
+	border-right:5px solid transparent;
+	border-bottom:230px solid black;
+	position: absolute;
+	left:50%;
+	bottom:290px;
+	transform-origin:100% 100%;
+	*/
+
+}
+.second{
+	width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 3.5px 280px 3.5px;
+    border-color: transparent transparent #e0091b transparent;
+	position: absolute;
+	left:50%;
+	bottom:298px;
+	transform-origin:100% 100%;
+}
+
+
+		
+	</style>
+</head>
+<body>
+
+<div id="main">
+	<div class="hour"></div>
+	<div class="minute"></div>
+	<div class="second"></div>
+	<div class="circle"></div>
+</div>
+
+<script>
+	var myClock=setInterval(clock,1000)
+	function clock(){ 
+		var date=new Date();
+		var hour=30*date.getHours();
+		var minute=6*date.getMinutes();
+		var second=6*date.getSeconds();
+
+			document.getElementsByClassName('hour')[0].style.transform="rotate("+hour+"deg)";
+			document.getElementsByClassName('minute')[0].style.transform="rotate("+minute+"deg)";
+			document.getElementsByClassName('second')[0].style.transform="rotate("+second+"deg)";
+	}
+</script>
+</body>
+</html>
